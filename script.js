@@ -14,7 +14,7 @@ function getComputerChoice(){
     }
 }
 
-function playGame(playerSelection, computerSelection = getComputerChoice()) {
+function playRound(playerSelection, computerSelection = getComputerChoice()) {
     let playerChoice = playerSelection.toLowerCase();
     let computerChoice = computerSelection.toLowerCase();
     if(playerChoice == 'rock' && computerChoice == 'scissors'){
@@ -39,4 +39,41 @@ function playGame(playerSelection, computerSelection = getComputerChoice()) {
     }
 }
 
-console.log(playGame('scissorS'))
+
+function game(){
+    playerScore = 0;
+    computerScore = 0;
+    tieScore = 0;
+    for (let i = 0; i < 5; i++){
+        playerResponse = prompt(`Lets play 5 rounds! Rock, paper, or scissors? \nRound: ${i} \nYour score: ${playerScore} \nComputer score: ${computerScore} \n Tie: ${tieScore}`);
+        playRound(playerResponse);
+        if(winner == "You lost! Try again"){
+            computerScore++
+        }
+        else if(winner == "It was a tie! Try again"){
+            tieScore++
+        }
+        else{
+            playerScore++
+        }
+    }
+    if(playerScore > computerScore){
+        playAgain = prompt(`You won! Score: ${playerScore} to ${computerScore}, play again?(Yes / No)`);
+        return playAgain;
+    }
+   else if(playerScore == computerScore) {
+        playAgain = prompt(`It's a tie! Score: ${playerScore} to ${computerScore}, Tie rounds: ${tieScore} play again?(Yes / No) `);
+        return playAgain;
+   } 
+    else {
+    playAgain = prompt(`You lost! Score: ${playerScore} to ${computerScore}, Play again?(Yes/No)`);
+        return playAgain;
+    } 
+}
+
+let playAgain = "yes"
+while (playAgain == "yes"){
+    game()
+    playAgain = playAgain.toLowerCase()
+}
+alert(`Thanks for playing!`)

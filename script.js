@@ -5,11 +5,11 @@ function getComputerChoice(){
         return answer;
     }
     else if (number > 33 && number < 66){
-        answer = 'Paper'
+        answer = 'Paper';
         return answer;
     }
     else {
-        answer = 'Scissors'
+        answer = 'Scissors';
         return answer;
     }
 }
@@ -67,21 +67,27 @@ replayContent.addEventListener('click', () =>{
 
 
 rock.addEventListener('click', () =>{
-    playRound('Rock');
+    if (playerScore < 5 && computerScore < 5){    
+        playRound('Rock');
+    }
     results.textContent = `Your score:${playerScore} \n 
  Computer score: ${computerScore} \n
 Tie Score: ${tieScore}`;
 })
 
 paper.addEventListener('click', () =>{
-   playRound('Paper');
+    if (playerScore < 5 && computerScore < 5){
+        playRound('Paper');
+    }
    results.textContent = `Your score:${playerScore} \n 
  Computer score: ${computerScore} \n
 Tie Score: ${tieScore}`;
 })
     
 scissors.addEventListener('click', () =>{
-    playRound('Scissors');
+    if (playerScore < 5 && computerScore < 5){
+        playRound('Scissors');
+    }
     results.textContent = `Your score:${playerScore} \n 
  Computer score: ${computerScore} \n
 Tie Score: ${tieScore}`;

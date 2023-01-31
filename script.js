@@ -19,25 +19,42 @@ function playRound(playerSelection, computerSelection = getComputerChoice()) {
     let computerChoice = computerSelection.toLowerCase();
     if(playerChoice == 'rock' && computerChoice == 'scissors'){
         playerScore++;
+        liveScoreContent.textContent = 'Nice! Rock beats scissors!'
     }
     else if (playerChoice == 'paper' && computerChoice == 'rock'){
         playerScore++;
+        liveScoreContent.textContent = 'Nice! Paper beats rock!'
     }
     else if (playerChoice == 'scissors' && computerChoice == 'paper'){
          playerScore++;
+         liveScoreContent.textContent = 'Nice! Scissors beats paper!'
     }
     else if (playerChoice == 'rock' && computerChoice == 'rock' || playerChoice == 'paper' && computerChoice == 'paper' || playerChoice == 'scissors' && computerChoice == 'scissors'){
         tieScore++;
+        liveScoreContent.textContent = `You both chose ${playerChoice}! It's a tie!!!`
     }
-    else{
+    else if (computerChoice == 'paper' && playerChoice == 'rock'){
         computerScore++;
+        liveScoreContent.textContent = 'Darn! Your opponent chose paper... Paper beats rock!'
+    }
+    else if (computerChoice == 'rock' && playerChoice == 'scissors'){
+        computerScore++;
+        liveScoreContent.textContent = 'Darn! Your opponent chose rock... Rock beats scissors!'
+    }
+    else if (computerChoice == 'scissors' && playerChoice == 'paper'){
+        computerScore++;
+        liveScoreContent.textContent = 'Darn! Your opponent chose scissors... Scissors beats paper!'
     }
 
-    if(playerScore == 5 || computerScore == 5){
-        replay.appendChild(replayContent);
-    }
+    liveScore.appendChild(liveScoreContent)
+    doReplay();
 }
 
+function doReplay () {
+    if(playerScore == 5 || computerScore == 5){
+        replay.appendChild(replayContent); //Show replay button after game
+    }
+}
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
@@ -47,8 +64,9 @@ const replay = document.querySelector('.replay');
 const replayContent = document.createElement('button');
 replayContent.textContent = 'Play again?';
 
-// const liveScore = document.querySelector('.liveScore')
-// liveScore.textContent = ''
+const liveScore = document.querySelector('.liveScore')
+const liveScoreContent = document.createElement('p')
+
 
 let playAgain = 'no';
 let playerScore = 0;

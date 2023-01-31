@@ -59,9 +59,7 @@ replayContent.addEventListener('click', () =>{
         tieScore = 0;
         playAgain = 'no';
         replay.removeChild(replayContent);
-        results.textContent = `Your score:${playerScore} \n 
-        Computer score: ${computerScore} \n
-       Tie Score: ${tieScore}`;
+    results.textContent = ` Your score:${playerScore}\n Computer score: ${computerScore}\n Tie Score: ${tieScore}`;
     }
 })
 
@@ -70,30 +68,22 @@ rock.addEventListener('click', () =>{
     if (playerScore < 5 && computerScore < 5){    
         playRound('Rock');
     }
-    results.textContent = `Your score:${playerScore} \n 
- Computer score: ${computerScore} \n
-Tie Score: ${tieScore}`;
+    results.textContent = ` Your score:${playerScore}\n Computer score: ${computerScore}\n Tie Score: ${tieScore}`;
 })
 
 paper.addEventListener('click', () =>{
     if (playerScore < 5 && computerScore < 5){
         playRound('Paper');
     }
-   results.textContent = `Your score:${playerScore} \n 
- Computer score: ${computerScore} \n
-Tie Score: ${tieScore}`;
+    results.textContent = ` Your score:${playerScore}\n Computer score: ${computerScore}\n Tie Score: ${tieScore}`;
 })
     
 scissors.addEventListener('click', () =>{
     if (playerScore < 5 && computerScore < 5){
         playRound('Scissors');
     }
-    results.textContent = `Your score:${playerScore} \n 
- Computer score: ${computerScore} \n
-Tie Score: ${tieScore}`;
+    results.textContent = ` Your score:${playerScore}\n Computer score: ${computerScore}\n Tie Score: ${tieScore}`;
 })
 
 
-results.textContent = `Your score:${playerScore} \n 
- Computer score: ${computerScore} \n
-Tie Score: ${tieScore}`;
+results.textContent = ` Your score:${playerScore}\n Computer score: ${computerScore}\n Tie Score: ${tieScore}`;

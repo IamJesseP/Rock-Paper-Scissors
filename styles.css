@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    background-color: #f2e9e4;
+    color: #22223b;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 300px;
+    height: 150px;
+    font-size: 30px;
+    border-radius: 5px;
+    margin: 2px;
+    color: white;
+    font-weight: 300;
+}
+
+nav > div {
+    width: 300px;
+    text-align: center;
+}
+
+div {
+    white-space: pre-wrap;
+}
+
+.rock{
+    background-color: #4a4e69;
+}
+
+.paper {
+    background-color: #9a8c98;
+}
+
+.scissors{
+    background-color: #c9ada7;
+}
+
+.results {
+    padding: 30px;
+    font-size: 20px;
+}
+
+.replay > button {
+    background-color: #22223b;
+    border-radius: 5px;
+}

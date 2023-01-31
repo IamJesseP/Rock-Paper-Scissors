@@ -81,6 +81,7 @@ replayContent.addEventListener('click', () =>{
         tieScore = 0;
         playAgain = 'no';
         replay.removeChild(replayContent);
+        liveScoreContent.textContent = ""
     results.textContent = ` Your score: ${playerScore}\n Opponent score: ${computerScore}\n Tie Score: ${tieScore}`;
     }
 })

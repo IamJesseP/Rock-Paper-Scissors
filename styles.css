@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-color: black;
     color: black;
-    background: url("/backgrnd.jpg") no-repeat;
+    background: url("./backgrnd.jpg") no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
@@ -30,7 +30,7 @@ button {
     border-radius: 5px;
     margin: 2px;
     font-weight: 300;
-    background: url("/crumple.webp") no-repeat;
+    background: url("./crumple.webp") no-repeat;
     background-size: auto;
     transition-duration: 0.01s;
 }

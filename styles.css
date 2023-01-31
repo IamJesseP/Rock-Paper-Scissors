@@ -1,7 +1,15 @@
+
 body {
     margin: 0;
-    background-color: #f2e9e4;
-    color: #22223b;
+    background-color: black;
+    color: black;
+    background: url("/backgrnd.jpg") no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+
 }
 
 .flex {
@@ -14,14 +22,16 @@ body {
     align-items: center;
 }
 
+
 button {
     width: 300px;
     height: 150px;
     font-size: 30px;
     border-radius: 5px;
     margin: 2px;
-    color: white;
     font-weight: 300;
+    background: url("/crumple.webp") no-repeat;
+    background-size: auto;
 }
 
 nav > div {
@@ -31,6 +41,11 @@ nav > div {
 
 div {
     white-space: pre-wrap;
+}
+
+.choices{
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .rock{

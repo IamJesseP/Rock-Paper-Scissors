@@ -42,9 +42,13 @@ const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
 const results = document.querySelector('.results');
+
 const replay = document.querySelector('.replay');
 const replayContent = document.createElement('button');
 replayContent.textContent = 'Play again?';
+
+// const liveScore = document.querySelector('.liveScore')
+// liveScore.textContent = ''
 
 let playAgain = 'no';
 let playerScore = 0;
@@ -59,31 +63,30 @@ replayContent.addEventListener('click', () =>{
         tieScore = 0;
         playAgain = 'no';
         replay.removeChild(replayContent);
-    results.textContent = ` Your score:${playerScore}\n Computer score: ${computerScore}\n Tie Score: ${tieScore}`;
+    results.textContent = ` Your score: ${playerScore}\n Opponent score: ${computerScore}\n Tie Score: ${tieScore}`;
     }
 })
-
 
 rock.addEventListener('click', () =>{
     if (playerScore < 5 && computerScore < 5){    
         playRound('Rock');
     }
-    results.textContent = ` Your score:${playerScore}\n Computer score: ${computerScore}\n Tie Score: ${tieScore}`;
+    results.textContent = ` Your score: ${playerScore}\n Opponent score: ${computerScore}\n Tie Score: ${tieScore}`;
 })
 
 paper.addEventListener('click', () =>{
     if (playerScore < 5 && computerScore < 5){
         playRound('Paper');
     }
-    results.textContent = ` Your score:${playerScore}\n Computer score: ${computerScore}\n Tie Score: ${tieScore}`;
+    results.textContent = ` Your score: ${playerScore}\n Opponent score: ${computerScore}\n Tie Score: ${tieScore}`;
 })
     
 scissors.addEventListener('click', () =>{
     if (playerScore < 5 && computerScore < 5){
         playRound('Scissors');
     }
-    results.textContent = ` Your score:${playerScore}\n Computer score: ${computerScore}\n Tie Score: ${tieScore}`;
+    results.textContent = ` Your score: ${playerScore}\n Opponent score: ${computerScore}\n Tie Score: ${tieScore}`;
 })
 
 
-results.textContent = ` Your score:${playerScore}\n Computer score: ${computerScore}\n Tie Score: ${tieScore}`;
+results.textContent = ` Your score: ${playerScore}\n Opponent score: ${computerScore}\n Tie Score: ${tieScore}`;

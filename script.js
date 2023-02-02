@@ -52,9 +52,29 @@ function playRound(playerSelection, computerSelection = getComputerChoice()) {
 
 function doReplay () {
     if(playerScore == 5 || computerScore == 5){
+        whoWonContent.textContent = `${whoWon()} \n`
+        replay.appendChild(whoWonContent);
+
         replay.appendChild(replayContent); //Show replay button after game
     }
 }
+
+function whoWon(){
+    if(playerScore > computerScore){
+        const winner = "You won!\n";
+        return  winner;
+    }
+    else {
+        const loser = "You lost!\n";
+        return loser;
+    }
+}
+
+let playAgain = 'no';
+let playerScore = 0;
+let computerScore = 0;
+let tieScore = 0;
+
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
@@ -62,16 +82,15 @@ const results = document.querySelector('.results');
 
 const replay = document.querySelector('.replay');
 const replayContent = document.createElement('button');
-replayContent.textContent = 'Play again?';
+replayContent.textContent = `Play again?`;
 
 const liveScore = document.querySelector('.liveScore')
 const liveScoreContent = document.createElement('p')
 
+const whoWonContent = document.createElement('h4')
 
-let playAgain = 'no';
-let playerScore = 0;
-let computerScore = 0;
-let tieScore = 0;
+
+
 
 replayContent.addEventListener('click', () =>{
     playAgain = 'yes';
@@ -81,8 +100,9 @@ replayContent.addEventListener('click', () =>{
         tieScore = 0;
         playAgain = 'no';
         replay.removeChild(replayContent);
+        replay.removeChild(whoWonContent);
         liveScoreContent.textContent = ""
-    results.textContent = ` Your score: ${playerScore}\n Opponent score: ${computerScore}\n Tie Score: ${tieScore}`;
+        results.textContent = ` Your score: ${playerScore}\n Opponent score: ${computerScore}\n Tie Score: ${tieScore}`;
     }
 })
 

@@ -28,7 +28,7 @@ button {
     height: 150px;
     font-size: 30px;
     border-radius: 5px;
-    margin: 2px;
+    margin: 5px;
     font-weight: 300;
     background: url("./crumple.webp") no-repeat;
     background-size: auto;
@@ -50,7 +50,6 @@ div {
 }
 
 .choices{
-    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -87,11 +86,14 @@ div {
 }
 
 .replay > h4 {
+    display: flex;
     text-align: center;
     text-decoration: underline;
     font-size: 32px;
     font-family: monospace;
     letter-spacing: 5px;
+    margin: 0;
+    height:40px;
 }
 .replay > h4 {
     background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);

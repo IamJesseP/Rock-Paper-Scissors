@@ -1,7 +1,7 @@
-# rock-paper-scissors
+# Rock-Paper-Scissors
 Created as part of [The Odin Project](https://www.theodinproject.com/about) Cirriculum
 
-A live preview of my project is [here](https://iamjessep.github.io/rock-paper-scissors/)
+A live preview of my project is [here](https://iamjessep.github.io/Rock-Paper-Scissors/)
 
 ### Technologies
 * HTML

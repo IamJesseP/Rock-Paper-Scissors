@@ -25,5 +25,5 @@ A live preview of my project is [here](https://iamjessep.github.io/Rock-Paper-Sc
 
 * Solidifed **Javascript concepts**, such as DOM manipulation and event listeners
 * Improved use of basic **Javascript** concepts
-* Improved use of **HTML5, CSS3 flex**
+* Improved use of **HTML5** and **CSS3 flex**
 * Improved understanding code structure and readability
